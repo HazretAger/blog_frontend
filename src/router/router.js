@@ -1,8 +1,10 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomePage from "@/views/HomePage";
 import PopularPage from "@/views/PopularPage";
-import AllArticles from "@/views/AllArticles";
+import Articles from "@/views/Articles";
 import MyArticles from "@/views/MyArticles";
+import Login from "@/views/User/Login";
+import Registration from "@/views/User/Registration";
 
 const routes = [
   {
@@ -10,16 +12,24 @@ const routes = [
     component: HomePage,
   },
   {
-    path: "/popular",
+    path: "/populars",
     component: PopularPage,
   },
   {
-    path: "/allarticle",
-    component: AllArticles,
+    path: "/articles",
+    component: Articles,
   },
   {
     path: "/myarticles",
     component: MyArticles,
+  },
+  {
+    path: "/login",
+    component: Login,
+  },
+  {
+    path: "/registration",
+    component: Registration,
   },
 ];
 

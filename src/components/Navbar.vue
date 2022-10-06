@@ -1,8 +1,8 @@
 <template>
-  <v-app-bar class="pb-4" color="white" elevation="0">
+  <v-app-bar color="white" elevation="0" hide-on-scroll>
     <v-container class="d-flex justify-between">
       <v-img
-        @click="$router.push('/')"
+        @click="this.$router.push('/')"
         max-height="50"
         max-width="50"
         src="../assets/logo.png"
@@ -11,7 +11,9 @@
       <div class="d-flex align-center">
         <ui class="d-flex align-center">
           <li v-for="{ name, url } in items">
-            <v-btn @click="$router.push(url)" variant="text">{{ name }}</v-btn>
+            <v-btn @click="this.$router.push(url)" variant="text">{{
+              name
+            }}</v-btn>
           </li>
         </ui>
         <v-btn icon="mdi-account-circle" color="info"></v-btn>
@@ -26,8 +28,8 @@ export default {
   data() {
     return {
       items: [
-        { name: "Все статьи", url: "/allarticles" },
-        { name: "Популярные статьи", url: "/popular" },
+        { name: "Все статьи", url: "/articles" },
+        { name: "Популярные статьи", url: "/populars" },
         { name: "Мои статьи", url: "/myarticles" },
       ],
     };

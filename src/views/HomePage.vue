@@ -39,7 +39,6 @@
         </v-timeline-item>
       </v-timeline>
     </v-container>
-    <Footer></Footer>
   </div>
 </template>
 <script>
