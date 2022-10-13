@@ -1,4 +1,4 @@
-# blogger
+# blog_frontend
 
 ## Project setup
 ```
