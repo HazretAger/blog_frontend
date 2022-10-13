@@ -9,11 +9,25 @@
       >
         <div class="d-flex flex-column text-center">
           <span class="title text-h1">Добро пожаловать на блог</span>
-          <div class="mt-5">
-            <v-btn flat color="orange" class="red--text">
+          <!-- <div class="mt-5">
+            <v-btn
+              @click="$router.push('/registration')"
+              flat
+              color="orange"
+              class="red--text"
+            >
               Зарегистрироваться
             </v-btn>
-          </div>
+            <p class="my-2" style="color: white">ИЛИ</p>
+            <v-btn
+              @click="$router.push('/login')"
+              flat
+              color="orange"
+              class="red--text"
+            >
+              Войти
+            </v-btn>
+          </div> -->
         </div>
       </v-img>
     </v-container>

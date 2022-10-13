@@ -5,6 +5,7 @@ import Articles from "@/views/Articles";
 import MyArticles from "@/views/MyArticles";
 import Login from "@/views/User/Login";
 import Registration from "@/views/User/Registration";
+import UserProfile from "@/views/User/UserProfile";
 
 const routes = [
   {
@@ -30,6 +31,12 @@ const routes = [
   {
     path: "/registration",
     component: Registration,
+  },
+  {
+    path: "/profile/:userId",
+    name: "profile",
+    component: UserProfile,
+    props: true,
   },
 ];
 

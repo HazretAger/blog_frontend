@@ -25,14 +25,15 @@
         <v-card-actions>
           <v-spacer></v-spacer>
 
-          <v-btn @click="login" color="success"> Войти </v-btn>
+          <v-btn @click="fetchData" color="success"> Войти </v-btn>
         </v-card-actions>
       </v-card>
     </div>
   </v-container>
 </template>
 <script>
-import axios from "axios";
+import { mapActions } from "vuex";
+
 export default {
   data() {
     return {
@@ -40,15 +41,23 @@ export default {
       password: "",
     };
   },
-
   methods: {
-    login() {
-      const data = {
+    async fetchData() {
+      const payload = {
         email: this.email,
         password: this.password,
       };
-      axios.post("http://localhost:4444/auth/login", data);
+
+      const { id, isAuth } = await this.login(payload);
+
+      if (isAuth) {
+        this.$router.push({
+          name: "profile",
+          params: { userId: id },
+        });
+      }
     },
+    ...mapActions("user", ["login"]),
   },
 };
 </script>
